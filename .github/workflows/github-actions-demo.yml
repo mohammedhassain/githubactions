@@ -1,3 +1,4 @@
+#github actions
 name: GitHub Actions Demo
 on: [push]
 jobs:
@@ -13,6 +14,7 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
+          touch file3.txt
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
